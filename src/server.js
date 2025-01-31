@@ -28,6 +28,11 @@ app.post('/api/v2/test',(req,res)=>{
   res.json({status:'ok',message:'test new'})
 });
 
+app.post('/api/v2/feature1',(req,res)=>{
+  res.json({status:'ok',message:'test feature1'})
+});
+
+
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {
