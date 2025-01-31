@@ -20,6 +20,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date() });
 });
 
+app.post('/api/test',(req,res)=>{
+  res.json({status:'ok',message:'test new'})
+});
+
 // Socket.IO connection handling
 io.on('connection', (socket) => {
   console.log('Client connected:', socket.id);
@@ -44,6 +48,7 @@ io.on('connection', (socket) => {
     console.log('Client disconnected:', socket.id);
   });
 });
+
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
