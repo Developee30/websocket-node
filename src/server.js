@@ -29,6 +29,10 @@ app.post('/api/v2/test',(req,res)=>{
 });
 
 
+app.post('/api/v3/test',(req,res)=>{
+  res.json({status:'ok',message:'test new'})
+});
+
 // Socket.IO connection handling
 io.on('connection', (socket) => {
   console.log('Client connected:', socket.id);
