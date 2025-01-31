@@ -28,6 +28,9 @@ app.post('/api/v2/test',(req,res)=>{
   res.json({status:'ok',message:'test new'})
 });
 
+app.post('/api/v4/feature2',(req,res)=>{
+  res.json({status:'ok',message:'test 4'})
+});
 
 app.post('/api/v3/feature3',(req,res)=>{
   res.json({status:'ok',message:'test new'})
